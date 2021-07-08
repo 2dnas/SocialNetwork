@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="3dp">
+    
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="8dp">
+
+        
+        <ImageView
+            android:id="@+id/ivItemPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivItemAuthorProfileImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivItemPostImage"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvItemPostAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="User"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivItemAuthorProfileImage"
+            app:layout_constraintTop_toTopOf="@id/ivItemAuthorProfileImage"
+            app:layout_constraintBottom_toBottomOf="@id/ivItemAuthorProfileImage"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvItemLikedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="likes count"
+            app:fontFamily="@font/tahoma_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivItemAuthorProfileImage"/>
+
+        <ImageButton
+            android:id="@+id/ibDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_delete_grey"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivItemAuthorProfileImage"
+            app:layout_constraintTop_toTopOf="@id/ivItemAuthorProfileImage"/>
+        
+        
+        <View
+            android:id="@+id/dividerView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvItemLikedBy"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvItemPostDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/example_post_text"
+            app:layout_constraintTop_toBottomOf="@id/dividerView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <ImageButton
+            android:id="@+id/ibItemLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_like"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvItemPostDescription"/>
+
+        <ImageButton
+            android:id="@+id/ibItemComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_comment"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@id/ibItemLike"
+            app:layout_constraintTop_toBottomOf="@id/tvItemPostDescription"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
